@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>hamster</display-name>
+  
+  <filter>
+  	<filter-name>hamsterFilter</filter-name>
+  	<filter-class>com.hamster.filter.HamsterFilter</filter-class>
+  	<init-param>
+  		<param-name>en</param-name>
+  		<param-value>UTF-8</param-value>
+  	</init-param>
+  </filter>
+  
+  <filter-mapping>
+  	<filter-name>hamsterFilter</filter-name>
+  	<url-pattern>/hamster/*</url-pattern>
+  </filter-mapping>
+  
+  <filter-mapping>
+  	<filter-name>hamsterFilter</filter-name>
+  	<url-pattern>/growth/*</url-pattern>
+  </filter-mapping>
+   
+   <servlet>
+  	<servlet-name>hamsterAddServlet</servlet-name>
+  	<servlet-class>com.hamster.hamster.HamsterAddServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>hamsterDeleteServlet</servlet-name>
+  	<servlet-class>com.hamster.hamster.HamsterDeleteServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>hamsterEditServlet</servlet-name>
+  	<servlet-class>com.hamster.hamster.HamsterEditServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>hamsterListServlet</servlet-name>
+  	<servlet-class>com.hamster.hamster.HamsterListServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>hamsterViewServlet</servlet-name>
+  	<servlet-class>com.hamster.hamster.HamsterViewServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>hamsterAddServlet</servlet-name>
+  	<url-pattern>/hamster/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>hamsterDeleteServlet</servlet-name>
+  	<url-pattern>/hamster/delete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>hamsterEditServlet</servlet-name>
+  	<url-pattern>/hamster/edit</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>hamsterListServlet</servlet-name>
+  	<url-pattern>/hamster/list</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>hamsterViewServlet</servlet-name>
+  	<url-pattern>/hamster/view</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>growthAddServlet</servlet-name>
+  	<servlet-class>com.hamster.growth.GrowthAddServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>growthDeleteServlet</servlet-name>
+  	<servlet-class>com.hamster.growth.GrowthDeleteServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>growthEditServlet</servlet-name>
+  	<servlet-class>com.hamster.growth.GrowthEditServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>growthListServlet</servlet-name>
+  	<servlet-class>com.hamster.growth.GrowthListServlet</servlet-class>
+  </servlet>
+  
+  <servlet>
+  	<servlet-name>growthViewServlet</servlet-name>
+  	<servlet-class>com.hamster.growth.GrowthViewServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>growthAddServlet</servlet-name>
+  	<url-pattern>/growth/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>growthDeleteServlet</servlet-name>
+  	<url-pattern>/growth/delete</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>growthEditServlet</servlet-name>
+  	<url-pattern>/growth/edit</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>growthListServlet</servlet-name>
+  	<url-pattern>/growth/list</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>growthViewServlet</servlet-name>
+  	<url-pattern>/growth/view</url-pattern>
+  </servlet-mapping>
+  
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
